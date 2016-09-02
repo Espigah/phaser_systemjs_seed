@@ -1,0 +1,47 @@
+{
+  "name": "phaser_systemjs_seed",
+  "version": "1.0.0",
+  "description": "phaser+systemjs+jspm+typescript seed ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phaser",
+    "systemjs",
+    "typescript",
+    "jspm"
+  ],
+  "author": "espigah",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar-socket-emitter": "^0.5.4",
+    "es6-promise": "^3.2.1",
+    "es6-shim": "^0.35.1",
+    "http-server": "^0.9.0",
+    "jspm": "^0.16.45",
+    "open": "0.0.5",
+    "systemjs": "^0.19.37"
+  },
+ 
+  "jspm": {
+    "dependencies": {
+      "phaser": "github:photonstorm/phaser@^2.6.2",
+      "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.6.0",
+      "ts": "github:frankwallis/plugin-typescript@^5.0.19"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    },
+    "overrides": {
+      "github:photonstorm/phaser@2.6.2": {
+        "shim": {
+          "build/phaser": {
+            "exports": "Phaser"
+          }
+        }
+      }
+    }
+  }
+}
